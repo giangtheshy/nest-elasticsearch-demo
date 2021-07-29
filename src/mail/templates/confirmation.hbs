@@ -1,0 +1,48 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Mail sending</title>
+    <style type='text/css'>
+      .container{ width: 80%; margin: 2rem auto; border-radius: 1rem; border:
+      3px solid lightblue; padding: 2rem; background-image:linear-gradient(to
+      bottom, #081b27, rgba(8, 27, 39, 0.9)),
+      url("https://res.cloudinary.com/giangtheshy/image/upload/v1627482147/dev/background/ih1htcktdjzpxiha6z11.jpg");
+      background-blend-mode: darken; background-repeat: no-repeat;
+      background-attachment: fixed; background-position: center center;
+      background-size: cover; } .header{ margin: 1rem auto 3rem auto; display:
+      grid; place-items: center; border-bottom: 1px solid brown; } .header
+      .title{ color: rgb(250, 174, 59); font-size: 1.5rem; } .body{ color:
+      brown; font-size: 1.3rem; } .body .button{ margin: 2rem auto;
+      border-radius: 1rem; border: 2px solid brown; color: brown; background:
+      #fff; font-size: 1.2rem; padding: .5rem 2rem; text-decoration: none;
+      display: block; width: 8rem; text-align: center; } .footer{ color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='header'>
+        <h3 class='title'>Confirm your email!</h3>
+      </div>
+      <div class='body'>
+        <h6 class='name'>Hey {{name}}</h6>
+        <p class='intro'>You registered an account in my website with this
+          email. You final mission are verify your account to login in our
+          website.</p>
+        <p>If you did not request this email you can safely ignore it.</p>
+        <p class='description'>Please click below to confirm your email</p>
+        <a href={{url}} class='button'>Confirm</a>
+      </div>
+      <div class='footer'>
+        <p>If button is not visible, please follow this link below: </p>
+        <p>{{url}}</p>
+        <p>Yours sincerely,</p>
+        <p>Giang</p>
+      </div>
+
+    </div>
+
+  </body>
+</html>
