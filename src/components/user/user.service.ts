@@ -2,16 +2,15 @@ import {
   Injectable,
   NotAcceptableException,
   NotFoundException,
-  UnauthorizedException,
+  UnauthorizedException
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
+import { MailService } from '@services/mail/mail.service';
+import { Response } from 'express';
 import * as jwt from 'jsonwebtoken';
 import { Model } from 'mongoose';
-import * as bcrypt from 'bcrypt';
-import { MailService } from 'src/mail/mail.service';
 import { UserLogin, UserRegister } from './dto';
 import { User } from './user.model';
-import { Response } from 'express';
 
 @Injectable()
 export class UserService {

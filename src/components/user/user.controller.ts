@@ -9,7 +9,7 @@ import {
   UsePipes,
 } from '@nestjs/common';
 import { Request, Response } from 'express';
-import { ValidationPipe } from 'src/shared/pipes/validation.pipe';
+import { ValidationPipe } from '@shared/pipes/validation.pipe';
 import { UserLogin, UserRegister } from './dto';
 import { User } from './user.decorator';
 import { UserService } from './user.service';

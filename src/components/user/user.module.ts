@@ -5,14 +5,17 @@ import {
   RequestMethod,
 } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { MailModule } from 'src/mail/mail.module';
+import { MailModule } from '@services/mail/mail.module';
 import { AuthMiddleware } from './auth.middleware';
 import { UserController } from './user.controller';
 import { UserSchema } from './user.model';
 import { UserService } from './user.service';
 
 @Module({
-  imports: [MongooseModule.forFeature([{ name: 'User', schema: UserSchema }]),MailModule],
+  imports: [
+    MongooseModule.forFeature([{ name: 'User', schema: UserSchema }]),
+    MailModule,
+  ],
   providers: [UserService],
   controllers: [UserController],
 })

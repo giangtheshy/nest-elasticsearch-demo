@@ -1,9 +1,11 @@
+import { ProductModule } from '@components/product/product.module';
+import { UserModule } from '@components/user/user.module';
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
+import { MailModule } from '@services/mail/mail.module';
+import { SearchModule } from '@services/search/search.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UserModule } from './user/user.module';
-import { MailModule } from './mail/mail.module';
 
 @Module({
   imports: [
@@ -15,6 +17,8 @@ import { MailModule } from './mail/mail.module';
     }),
     UserModule,
     MailModule,
+    SearchModule,
+    ProductModule,
   ],
   controllers: [AppController],
   providers: [AppService],
